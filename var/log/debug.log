@@ -3221,3 +3221,4 @@
 [2016-08-24 10:02:32] main.DEBUG: cache_invalidate:  {"method":"GET","url":"http:/","invalidateInfo":{"tags":[],"mode":"all"},"is_exception":false} []
 [2016-08-24 10:49:57] main.DEBUG: cache_invalidate:  {"method":"GET","url":"http:/","invalidateInfo":{"tags":[],"mode":"all"},"is_exception":false} []
 [2016-08-24 10:49:57] main.DEBUG: cache_invalidate:  {"method":"GET","url":"http:/","invalidateInfo":{"tags":[],"mode":"all"},"is_exception":false} []
+[2016-08-24 11:49:47] main.DEBUG: cache_invalidate:  {"method":"POST","url":"http://127.0.0.1/SheaMoisture2/admin_jvnc/admin/index/index/key/0c278c8d271e7b7972cfd22189de8b8db022de279373cec7dadf9315ba78c20a/","invalidateInfo":{"tags":["BACKEND_MAINMENU"],"mode":"matchingAnyTag"},"is_exception":false} []
