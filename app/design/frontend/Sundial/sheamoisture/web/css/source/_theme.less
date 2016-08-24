@@ -1,0 +1,80 @@
+// /**
+//  * Copyright © 2015 Magento. All rights reserved.
+//  * See COPYING.txt for license details.
+//  */
+
+//
+//  Blank theme overrides
+//  _____________________________________________
+
+//  Theme file should contain declarations (overrides) ONLY OF EXISTING variables
+//  Otherwise this theme won't be available for parent nesting
+//  All new variables should be placed in local theme lib or local theme files
+.clearboth {
+    clear: both;
+    height: 0;
+    text-indent: -9999px
+}
+
+
+.copyright{
+    text-align: center;
+    background-color: #FF5359;
+    width:100%;
+}
+.link.wishlist{
+    &:before{
+        -webkit-font-smoothing: antialiased;
+        font-size: 35px;
+        line-height: 33px;
+        color: #8f8f8f;
+        content: '\e600';
+        font-family: 'icons-blank-theme';
+        margin: 0;
+        vertical-align: top;
+        display: inline-block;
+        font-weight: normal;
+        overflow: hidden;
+        speak: none;
+        text-align: center;
+    }
+}
+.authorization-link{
+    &:before{
+        -webkit-font-smoothing: antialiased;
+        font-size: 22px;
+        line-height: 21px;
+        color: #8f8f8f;
+        content: '\e600';
+        font-family: 'Admin Icons';
+        margin: 0;
+        vertical-align: top;
+        display: inline-block;
+        font-weight: normal;
+        overflow: hidden;
+        speak: none;
+        text-align: center;
+    }
+}
+.promotionBanner{
+    position: absolute;
+    margin-top: -7.5%;
+    margin-left: 5%;
+}
+.store_locator{
+    &:before{
+        -webkit-font-smoothing: antialiased;
+        font-size: 22px;
+        line-height: 21px;
+        color: #8f8f8f;
+        content: '\e60d';
+        font-family: 'Admin Icons';
+        margin: 0;
+        vertical-align: top;
+        display: inline-block;
+        font-weight: normal;
+        overflow: hidden;
+        speak: none;
+        text-align: center;
+    }
+}

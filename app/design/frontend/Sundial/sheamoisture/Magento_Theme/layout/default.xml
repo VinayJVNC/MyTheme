@@ -1,0 +1,125 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="header.container">
+            <container name="header.panel.wrapper" htmlClass="panel wrapper" htmlTag="div" before="-"/>
+        </referenceContainer>
+        <move element="header.panel" destination="header.panel.wrapper"/>
+        <move element="top.links" destination="header.panel" after="-"/>
+        <move element="catalog.topnav" destination="store.menu" before="-"/>
+		<!-- Header Links Customisation -->
+		 <referenceBlock  name="top.links">
+		<block class="Magento\Framework\View\Element\Html\Link" name="storelocate.link" before="-">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">Store Locator</argument>
+                    <argument name="path" xsi:type="string" translate="false">store-locator</argument>
+                    <argument name="class" xsi:type="string">store_locator</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Framework\View\Element\Html\Link" name="aboutus.link" after="authorization-link">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">English</argument>
+                    <argument name="path" xsi:type="string" translate="false">about-us</argument>
+                    <argument name="class" xsi:type="string">language</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Framework\View\Element\Html\Link" name="comcom.link" after="about-us">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">Community Commerce</argument>
+                    <argument name="path" xsi:type="string" translate="false">community-commerce</argument>
+                    <argument name="class" xsi:type="string">community_commerece</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Framework\View\Element\Html\Link" name="story.link" after="comunity-commerce">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">Our Story</argument>
+                    <argument name="path" xsi:type="string" translate="false">our-story</argument>
+                    <argument name="class" xsi:type="string">our_story</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Framework\View\Element\Html\Link" name="ingred.link" after="our-story">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">Our Ingredients</argument>
+                    <argument name="path" xsi:type="string" translate="false">our-ingredients</argument>
+                    <argument name="class" xsi:type="string">our_ingredients</argument>
+                </arguments>
+            </block>
+
+            <referenceBlock name="register-link" remove="true" /> 
+			<!--<referenceBlock name="my-account-link" remove="true" /> 
+             <move element="wish-list-link" destination="account_login_group"/> -->
+
+        </referenceBlock >
+		<!-- End of customisation -->
+		
+        <referenceContainer name="page.top">
+            <block class="Magento\Framework\View\Element\Template" name="navigation.sections" before="-" template="Magento_Theme::html/sections.phtml">
+                <arguments>
+                    <argument name="group_name" xsi:type="string">navigation-sections</argument>
+                    <argument name="group_css" xsi:type="string">nav-sections</argument>
+                </arguments>
+                <block class="Magento\Framework\View\Element\Template" name="store.menu" group="navigation-sections" template="Magento_Theme::html/container.phtml">
+                    <arguments>
+                        <argument name="title" translate="true" xsi:type="string">Menu</argument>
+                    </arguments>
+                </block>
+                <block class="Magento\Framework\View\Element\Text" name="store.links" group="navigation-sections">
+                    <arguments>
+                        <argument name="title" translate="true" xsi:type="string">Account</argument>
+                        <argument name="use_force" xsi:type="boolean">true</argument>
+                        <argument name="text" xsi:type="string"><![CDATA[<!-- Account links -->]]></argument>
+                    </arguments>
+                </block>
+                <block class="Magento\Framework\View\Element\Template" name="store.settings" group="navigation-sections" template="Magento_Theme::html/container.phtml">
+                    <arguments>
+                        <argument name="title" translate="true" xsi:type="string">Settings</argument>
+                    </arguments>
+                    <block class="Magento\Store\Block\Switcher" name="store.settings.language" template="switch/languages.phtml">
+                        <arguments>
+                            <argument name="id_modifier" xsi:type="string">nav</argument>
+                        </arguments>
+                    </block>
+                    <block class="Magento\Directory\Block\Currency" name="store.settings.currency" before="store_language" template="currency.phtml">
+                        <arguments>
+                            <argument name="id_modifier" xsi:type="string">nav</argument>
+                        </arguments>
+                    </block>
+                </block>
+            </block>
+        </referenceContainer>
+		<referenceContainer name="footer-container">            
+            <container name="footer-top" label="Footer Top" htmlTag="div" htmlClass="footer-top page-main sheamoisture_footer_contents" before="-">
+                <block class="Magento\Cms\Block\Block" name="footer-content-top">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">footer-content-top</argument>						
+                    </arguments>
+                </block>												
+                <!-- <block class="Magento\Cms\Block\Block" name="sheamoisture_footer_oes">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">sheamoisture_footer_oes</argument>
+                    </arguments>
+                </block>
+            
+                <block class="Magento\Cms\Block\Block" name="sheamoisture_footer_cc">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">sheamoisture_footer_cc</argument>
+                    </arguments>
+                </block> -->
+            </container>
+			<!-- <block class="Magento\Framework\View\Element\Html\Links" name="footer_links">
+				<arguments>
+					<argument name="css_class" xsi:type="string">footer links</argument>
+				</arguments>
+			</block> -->			
+        </referenceContainer>
+		<referenceBlock name="form.subscribe" remove="true"/>
+		<referenceBlock name="report.bugs" remove="true"/>	       
+		<!-- <move element="copyright" destination="before.body.end"/> -->
+    </body>
+</page>
