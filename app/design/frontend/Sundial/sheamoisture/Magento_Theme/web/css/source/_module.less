@@ -73,7 +73,7 @@ body {
     z-index: 5;
     float: left;
     max-width: 50%;
-    margin: 0 0 @indent__s @indent__xl;	
+    margin: 0 0 @indent__s @indent__xl; 
     img {
         max-height: 50px;
         max-width: 100%;
@@ -150,6 +150,7 @@ body {
 
 .footer {
     &.content {
+        background: #FF5359;        
         padding-top: 25px;
         margin-top: 25px;
         padding-bottom: 25px;
@@ -159,7 +160,13 @@ body {
         }
         .links {
             > li {
-                margin: 0 0 8px;
+                margin: 0 1% 8px;
+                display: inline;
+                padding: inherit;
+                border-right:1px solid #512C1D;
+            }
+            > li:last-child{
+                border-right: none;
             }
         }
         .switcher-store {
@@ -255,17 +262,20 @@ body {
             height: 100%;
         }
     }
-
-    .navigation{
+.navigation{
+    background:white !important;
+}
+    .navigation ul {
+        padding: 0 8px;
+        text-align:center;
         text-transform: uppercase;
-        background:white
-        > ul{
-            padding: 0 8px;
-            text-align:center;                
-        }
+        background:white;
+    }
+    .navigation ul {
         > li{
-            text-align:left;            
-        }
+            text-align:left;
+            text-transform: uppercase;
+        }               
     }
 
     .header {
@@ -273,8 +283,8 @@ body {
             > .header.links {
                 float: right;
                 font-size: 14px;
-				width: 40%;
-				text-align:start;
+                width: 40%;
+                text-align:start;
                 .lib-list-inline();
                 > li {
                     font-size: @font-size__base;
@@ -304,7 +314,7 @@ body {
         .panel.wrapper {
             //border-bottom: 1px solid @secondary__color;
         }
-        .header.panel {		
+        .header.panel {     
             padding-top: @indent__s;
             padding-bottom: @indent__s;
             &:extend(.abs-add-clearfix-desktop all);
@@ -318,6 +328,8 @@ body {
         > .page-title-wrapper {
             .page-title {
                 display: inline-block;
+                text-transform:uppercase;
+                text-align:center;
             }
             .page-title + .action {
                 float: right;
@@ -339,11 +351,12 @@ body {
             .block {
                 float: right;
             }
-            .links {
-                display: inline-flex;
+            .links {                
                 vertical-align: top;
                 margin-bottom: 20px;
                 padding: 0 50px 0 0;
+                width: 100%;
+                text-align: center;
             }
             .switcher.store {
                 display: inline-block;
