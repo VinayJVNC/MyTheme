@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Sheamoisture
+ * 
+ * NOTICE OF LICENSE
+ * 
+ * This source file is subject to the Sheamoisture.com license that is
+ * available through the world-wide-web at this URL:
+ * http://www.sheamoisture.com/license-agreement.html
+ * 
+ * DISCLAIMER
+ * 
+ * Do not edit or add to this file if you wish to upgrade this extension to newer
+ * version in the future.
+ * 
+ * @category   SundialTheme
+ * @package    Sundial_ImageSlider
+ * @copyright  Copyright (c) 2014 Sheamoisture (http://www.sheamoisture.com/)
+ * @license    http://www.sheamoisture.com/LICENSE-1.0.html
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../../../lib/internal/Magento/Framework/View/Layout/etc/page_configuration.xsd">
+	<head>
+		<css src="Sundial_ImageSlider::css/styles.css" />
+	</head>
+	<update handle="editor"/>
+	<body>
+		<referenceContainer name="js">
+			<block class="Magento\Framework\View\Element\Template" template="Sundial_ImageSlider::wysiwyg/js.phtml" name="imageslider.wysiwyg.js"/>
+		</referenceContainer>
+	</body>
+</page>
