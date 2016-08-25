@@ -2,7 +2,6 @@
 return array (
   'modules' => 
   array (
-    'Emizentech_Banner' => 1,
     'Magento_Store' => 1,
     'Magento_AdvancedPricingImportExport' => 1,
     'Magento_Directory' => 1,
@@ -121,7 +120,7 @@ return array (
     'Magento_Wishlist' => 1,
     'Magento_WishlistSampleData' => 1,
     'Magestore_Bannerslider' => 1,
-    'Sundial_All' => 1,
-    'Sundial_ImageSlider' => 1,
+    'Ves_All' => 1,
+    'Ves_ImageSlider' => 1,
   ),
 );

@@ -1,16 +1,5 @@
 (function(require){
 (function() {
-var config = {
-    map: {
-        '*': {
-            jquery_bannerslider: 'Emizentech_Banner/js/jquery.bannerslider.js',
-            jquery_bannerslider: 'Emizentech_Banner/js/jquery.jq.1.12.0.min.js',
-        }
-    }
-};
-require.config(config);
-})();
-(function() {
 /**
  * Copyright © 2015 Magento. All rights reserved.
  * See COPYING.txt for license details.
@@ -443,8 +432,7 @@ require.config(config);
 var config = {
     map: {
         '*': {
-            orderReview:            'Magento_Paypal/order-review',
-            paypalCheckout:         'Magento_Paypal/js/paypal-checkout'
+            transparent:            'Magento_Payment/transparent'
         }
     }
 };
@@ -459,7 +447,8 @@ require.config(config);
 var config = {
     map: {
         '*': {
-            transparent:            'Magento_Payment/transparent'
+            orderReview:            'Magento_Paypal/order-review',
+            paypalCheckout:         'Magento_Paypal/js/paypal-checkout'
         }
     }
 };
@@ -643,11 +632,25 @@ require.config(config);
  var config = {
  	map: {
  		"*": {
- 			sundialallOwlCarousel: "Sundial_All/lib/owl.carousel/owl.carousel.min",
- 			sundialallBootstrap: "Sundial_All/lib/bootstrap/js/bootstrap.min",
- 			sundialallColorbox: "Sundial_All/lib/colorbox/jquery.colorbox.min",
- 			sundialallFancybox: "Sundial_All/lib/fancybox/jquery.fancybox.pack",
- 			sundialallFancyboxMouseWheel: "Sundial_All/lib/fancybox/jquery.mousewheel-3.0.6.pack"
+ 			vesallOwlCarousel: "Ves_All/lib/owl.carousel/owl.carousel.min",
+ 			vesallBootstrap: "Ves_All/lib/bootstrap/js/bootstrap.min",
+ 			vesallColorbox: "Ves_All/lib/colorbox/jquery.colorbox.min",
+ 			vesallFancybox: "Ves_All/lib/fancybox/jquery.fancybox.pack",
+ 			vesallFancyboxMouseWheel: "Ves_All/lib/fancybox/jquery.mousewheel-3.0.6.pack"
+ 		}
+ 	}
+ };
+require.config(config);
+})();
+(function() {
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+ var config = {
+ 	map: {
+ 		"*": {
+ 			imageowlcarousel: "Ves_ImageSlider/js/owl.carousel.min"
  		}
  	}
  };
