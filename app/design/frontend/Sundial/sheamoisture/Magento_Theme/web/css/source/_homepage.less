@@ -157,9 +157,11 @@
     }
 
 }
-.our-promise-block {
-    text-align: center;
+.our-promise-block {    
     margin: 30px 0;
+    .our-promise-block-content{
+        text-align:center;
+    }
     h1 {
         font-size: @font40;
         text-transform: uppercase;
@@ -168,8 +170,15 @@
     .promise-text {
         font-size: @font18;
         font-family: 'Futura Heavy font';
+        text-transform: uppercase;
     }
-    .strick-out {
+    .divider{
+        border-bottom: 2px solid @color-gray80;
+        .strick-siblings{
+            font-size: @font18;
+        }
+    }
+    /*.strick-out {
         margin:0 auto;
         width:37%;
         border-bottom: 2px solid @color-gray80;
@@ -189,7 +198,7 @@
                 font-size: @font20;
             }
         }
-    }
+    }*/
 }
 .promotional-bottom-block4{
     text-align: justify;

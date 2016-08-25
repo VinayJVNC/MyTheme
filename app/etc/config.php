@@ -2,6 +2,7 @@
 return array (
   'modules' => 
   array (
+    'FME_Banners' => 1,
     'Magento_Store' => 1,
     'Magento_AdvancedPricingImportExport' => 1,
     'Magento_Directory' => 1,
@@ -122,5 +123,7 @@ return array (
     'Magestore_Bannerslider' => 1,
     'Ves_All' => 1,
     'Ves_ImageSlider' => 1,
+    'WeltPixel_Backend' => 1,
+    'WeltPixel_OwlCarouselSlider' => 1,
   ),
 );
